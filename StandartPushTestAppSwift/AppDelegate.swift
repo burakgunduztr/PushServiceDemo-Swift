@@ -23,8 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         center.requestAuthorization(options: [.alert, .sound, .badge]) { (status: Bool, error: Error?) in
             if error == nil {
                 self.registerCategory()
-                // Now, I can see action buttons for that scheduled notification, but not from payload (nodeJS)
-//                self.scheduleNotification(event: "test", interval: 3)
+                // It's just for testing action buttons
+                // self.scheduleNotification(event: "test", interval: 3)
                 DispatchQueue.main.async {
                     UIApplication.shared.registerForRemoteNotifications()
                 }
@@ -55,21 +55,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
     }
     
-    func scheduleNotification (event : String, interval: TimeInterval) {
-        let content = UNMutableNotificationContent()
-        
-        content.title = event
-        content.body = "body"
-        content.categoryIdentifier = "MEETING_INVITATION"
-        let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: interval, repeats: false)
-        let identifier = "id_" + event
-        let request = UNNotificationRequest.init(identifier: identifier, content: content, trigger: trigger)
-        
-        let center = UNUserNotificationCenter.current()
-        center.add(request, withCompletionHandler: { (error) in
-        })
-    }
-    
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         let token = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
         print("Handled deviceToken: ")
@@ -93,6 +78,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler(.alert)
+    }
+    
+    // It's just for testing action buttons
+    func scheduleNotification (event : String, interval: TimeInterval) {
+        let content = UNMutableNotificationContent()
+        
+        content.title = event
+        content.body = "body"
+        content.categoryIdentifier = "MEETING_INVITATION"
+        let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: interval, repeats: false)
+        let identifier = "id_" + event
+        let request = UNNotificationRequest.init(identifier: identifier, content: content, trigger: trigger)
+        
+        let center = UNUserNotificationCenter.current()
+        center.add(request, withCompletionHandler: { (error) in
+        })
     }
 }
 
