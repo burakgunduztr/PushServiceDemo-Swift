@@ -15,7 +15,9 @@ It's a demo app to test remote APNS features: category, mutable-content, localiz
 ## Alert Localization
 {"aps":{"alert":{"title-loc-key":"groupChatSessionInvitationNotification_title","loc-key":"groupChatSessionInvitationNotification_body","loc-args":["Friends"]}}}
 
-## JWT token example using [(sideshow/apns2)](https://github.com/sideshow/apns2)
+- **Note: See sample clients below that you can send payloads.**
+
+## Send payloads by JWT [APNs Provider:(sideshow/apns2)](https://github.com/sideshow/apns2)
 
 - **Learn how to create token from [Apple](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/establishing_a_token-based_connection_to_apns)**
 
