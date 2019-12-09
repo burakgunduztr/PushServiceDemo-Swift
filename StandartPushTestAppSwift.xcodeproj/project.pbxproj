@@ -14,6 +14,7 @@
 		E3C14D512398F7980050242E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3C14D4F2398F7980050242E /* Main.storyboard */; };
 		E3C14D532398F7990050242E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3C14D522398F7990050242E /* Assets.xcassets */; };
 		E3C14D562398F7990050242E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3C14D542398F7990050242E /* LaunchScreen.storyboard */; };
+		E3FEAF79239E39AF00DE9310 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E3FEAF78239E39AF00DE9310 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		E3C14D552398F7990050242E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3C14D572398F7990050242E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3C14D5D2398F7E50050242E /* StandartPushTestAppSwift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StandartPushTestAppSwift.entitlements; sourceTree = "<group>"; };
+		E3FEAF78239E39AF00DE9310 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				E3C14D4F2398F7980050242E /* Main.storyboard */,
 				E3C14D522398F7990050242E /* Assets.xcassets */,
 				E3C14D542398F7990050242E /* LaunchScreen.storyboard */,
+				E3FEAF78239E39AF00DE9310 /* Localizable.strings */,
 				E3C14D572398F7990050242E /* Info.plist */,
 			);
 			path = StandartPushTestAppSwift;
@@ -210,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3C14D562398F7990050242E /* LaunchScreen.storyboard in Resources */,
+				E3FEAF79239E39AF00DE9310 /* Localizable.strings in Resources */,
 				E3C14D532398F7990050242E /* Assets.xcassets in Resources */,
 				E3C14D512398F7980050242E /* Main.storyboard in Resources */,
 			);

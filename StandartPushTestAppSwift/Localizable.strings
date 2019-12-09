@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  StandartPushTestApp
+
+  Created by Burak Gunduz on 5.12.2019.
+  Copyright © 2019 StandartPushTestApp. All rights reserved.
+*/
+
+"groupChatSessionInvitationNotification_title" = "You're invited to join a group";
+"groupChatSessionInvitationNotification_body" = "Group name is: %@";
