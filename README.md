@@ -17,7 +17,7 @@ It's a demo app to test remote APNS features: category, mutable-content, localiz
 
 ## JWT token example using [(sideshow/apns2)](https://github.com/sideshow/apns2)
 
-- **Learn how to create token from [Apple](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/establishing_a_token-based_connection_to_apns)
+- **Learn how to create token from [Apple](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/establishing_a_token-based_connection_to_apns)**
 
 ```package main
 
@@ -64,4 +64,4 @@ func main() {
   } 
 }
 ```
-- **Note: You can do it with certificate too. You can check details from [(sideshow/apns2)](https://github.com/sideshow/apns2)
+- **Note: You can do it with certificate too. You can check details from [(sideshow/apns2)](https://github.com/sideshow/apns2)**
