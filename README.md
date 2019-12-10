@@ -49,7 +49,7 @@ func main() {
   notification := &apns2.Notification{}
   notification.DeviceToken = "________"
   notification.Topic = "________"
-  notification.Payload = []byte(`{"aps":{"mutable-content":1,"alert":{"title":"React with push actions","body":"Tap to see actions about that push."}}}`) // See Payload section below
+  notification.Payload = []byte(`{"aps":{"mutable-content":1,"alert":{"title":"React with push actions","body":"Tap to see actions about that push."}}}`)
 
   client := apns2.NewTokenClient(token)
   res, err := client.Push(notification)
