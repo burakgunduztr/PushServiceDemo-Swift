@@ -85,8 +85,10 @@ func main() {
 
 ## How to enable mutable-content on iOS app:
 
-**Create Notification Service Extension**<br/>
+**Create Notification Service Extension:**<br/>
 Xcode > File > New > Target > Notification Service Extension
+
+## How to get deviceToken on iOS app:
 
 **Register remote notification and device-token handler in AppDelegate: didFinishLaunchingWithOptions**
 ```
