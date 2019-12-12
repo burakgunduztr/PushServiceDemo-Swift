@@ -67,3 +67,31 @@ func main() {
 }
 ```
 - **Note: You can do it with certificate too. You can check details from [(sideshow/apns2)](https://github.com/sideshow/apns2)**
+
+## How to enable mutable-content on iOS app:
+
+**Create Notification Service Extension**
+Xcode > File > New > Target > Notification Service Extension
+
+**Register remote notification and device-token handler in AppDelegate: didFinishLaunchingWithOptions**
+```let center = UNUserNotificationCenter.current()
+center.delegate = self
+        
+center.requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {
+   (granted, error) in
+   if granted {
+      DispatchQueue.main.async {
+         UIApplication.shared.registerForRemoteNotifications()
+      }
+   }
+})
+```
+
+**Add UNUserNotificationCenterDelegate to AppDelegate class, then add this method**
+```func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+   let token = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
+   print("Handled deviceToken: \(token)")
+}
+```
+
+**Use device token and mutable-content payload to test it**
