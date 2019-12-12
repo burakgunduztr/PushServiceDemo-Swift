@@ -5,7 +5,7 @@ It's a demo app to test remote APNS features: category, mutable-content, localiz
 
 ## Mutable-Content
 ```
-{"aps":{"mutable-content":1,"alert":{"title":"Test m/content","body":"It's a test for mutable content."}}}
+{"aps":{"mutable-content":1,"alert":{"title":"Test m-content","body":"It's a test for mutable content."}}}
 ```
 
 ## Category
@@ -15,7 +15,7 @@ It's a demo app to test remote APNS features: category, mutable-content, localiz
 
 ## Mutable-Content & Category
 ```
-{"aps":{"category":"MEETING_INVITATION","mutable-content":1,"alert":{"title":"Test m/content & w/category","body":"It's a test for mutable content and category."}}}
+{"aps":{"category":"MEETING_INVITATION","mutable-content":1,"alert":{"title":"Test m-content, category","body":"It's a test for mutable content and category."}}}
 ```
 
 ## Alert Localization - Key/Value sets
@@ -64,7 +64,7 @@ func main() {
   notification := &apns2.Notification{}
   notification.DeviceToken = "________"
   notification.Topic = "________"
-  notification.Payload = []byte(`{"aps":{"mutable-content":1,"alert":{"title":"React with push actions","body":"Tap to see actions about that push."}}}`)
+  notification.Payload = []byte(`{"aps":{"category":"MEETING_INVITATION","alert":{"title":"Test category","body":"Tap to see actions about that push."}}}`)
 
   client := apns2.NewTokenClient(token)
   res, err := client.Push(notification)
