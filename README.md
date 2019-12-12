@@ -21,7 +21,8 @@ It's a demo app to test remote APNS features: category, mutable-content, localiz
 
 - **Learn how to create token from [Apple](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/establishing_a_token-based_connection_to_apns)**
 
-```package main
+```
+package main
 
 import (
   "fmt"
@@ -74,7 +75,8 @@ func main() {
 Xcode > File > New > Target > Notification Service Extension
 
 **Register remote notification and device-token handler in AppDelegate: didFinishLaunchingWithOptions**
-```let center = UNUserNotificationCenter.current()
+```
+let center = UNUserNotificationCenter.current()
 center.delegate = self
         
 center.requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {
@@ -88,7 +90,8 @@ center.requestAuthorization(options: [.alert, .sound, .badge], completionHandler
 ```
 
 **Add UNUserNotificationCenterDelegate to AppDelegate class, then add this method**
-```func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+```
+func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
    let token = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
    print("Handled deviceToken: \(token)")
 }
