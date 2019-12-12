@@ -4,16 +4,30 @@ It's a demo app to test remote APNS features: category, mutable-content, localiz
 - **Note: Use these payloads with your desired APNS client.**
 
 ## Mutable-Content
+```
 {"aps":{"mutable-content":1,"alert":{"title":"React with push actions","body":"Tap to see actions about that push."}}}
+```
 
 ## Category
+```
 {"aps":{"category":"MEETING_INVITATION","alert":{"title":"React with push actions","body":"Tap to see actions about that push."}}}
+```
 
 ## Mutable-Content & Category
+```
 {"aps":{"category":"MEETING_INVITATION","mutable-content":1,"alert":{"title":"React with push actions","body":"Tap to see actions about that push."}}}
+```
 
-## Alert Localization
+## Alert Localization - Key/Value sets
+```
 {"aps":{"alert":{"title-loc-key":"groupChatSessionInvitationNotification_title","loc-key":"groupChatSessionInvitationNotification_body","loc-args":["Friends"]}}}
+```
+
+**Localizable.strings file on Xcode project** <br/>
+```
+"groupChatSessionInvitationNotification_title" = "You're invited to join a group";
+"groupChatSessionInvitationNotification_body" = "Group name is: %@";
+```
 
 - **Note: See sample clients below that you can send payloads.**
 
