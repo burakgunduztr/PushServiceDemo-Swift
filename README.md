@@ -5,17 +5,17 @@ It's a demo app to test remote APNS features: category, mutable-content, localiz
 
 ## Mutable-Content
 ```
-{"aps":{"mutable-content":1,"alert":{"title":"React with push actions","body":"Tap to see actions about that push."}}}
+{"aps":{"mutable-content":1,"alert":{"title":"Test m/content","body":"It's a test for mutable content."}}}
 ```
 
 ## Category
 ```
-{"aps":{"category":"MEETING_INVITATION","alert":{"title":"React with push actions","body":"Tap to see actions about that push."}}}
+{"aps":{"category":"MEETING_INVITATION","alert":{"title":"Test category","body":"Tap to see actions about that push."}}}
 ```
 
 ## Mutable-Content & Category
 ```
-{"aps":{"category":"MEETING_INVITATION","mutable-content":1,"alert":{"title":"React with push actions","body":"Tap to see actions about that push."}}}
+{"aps":{"category":"MEETING_INVITATION","mutable-content":1,"alert":{"title":"Test m/content & w/category","body":"It's a test for mutable content and category."}}}
 ```
 
 ## Alert Localization - Key/Value sets
@@ -113,4 +113,4 @@ func application(_ application: UIApplication, didRegisterForRemoteNotifications
 }
 ```
 
-**Use device token and mutable-content payload to test it**
+**Use device token and mutable-content payload to test it.**
