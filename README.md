@@ -3,6 +3,11 @@ It's a demo app to test remote APNS features: category, mutable-content, localiz
 
 - **Note: Use these payloads with your desired APNS client.**
 
+## Simple-Alert
+```
+{"aps":{"alert":{"title":"Test push","body":"This is simple alert push."}}}
+```
+
 ## Mutable-Content
 ```
 {"aps":{"mutable-content":1,"alert":{"title":"Test m-content","body":"It's a test for mutable content."}}}
