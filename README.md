@@ -1,4 +1,4 @@
-# pushDemoApp-Swift
+# PushServiceDemo-Swift
 It's a demo app to test remote APNS features: category, mutable-content, localization for alert title or body.
 
 - **Note: Use these payloads with your desired APNS client.**
